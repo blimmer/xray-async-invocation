@@ -10,6 +10,8 @@ export class XrayAsyncInvocationStack extends cdk.Stack {
 
     const triggeredFunction = new nodelambda.NodejsFunction(this, "triggered", {
       functionName: "test-xray-triggered",
+      // Since this is the triggered lambda, I'm using PASS_THROUGH instead of ACTIVE. However,
+      // the issue described in the README.md file exists whether I use ACTIVE or PASS_THROUGH here.
       tracing: lambda.Tracing.PASS_THROUGH,
       logRetention: logs.RetentionDays.ONE_DAY,
     });
