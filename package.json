@@ -14,7 +14,7 @@
     "@aws-cdk/assertions": "1.134.0",
     "@aws-cdk/aws-iam": "1.134.0",
     "@aws-cdk/aws-lambda": "1.134.0",
-    "@aws-cdk/aws-lambda-nodejs": "1.134.0",
+    "@aws-cdk/aws-lambda-python": "1.134.0",
     "@aws-cdk/aws-logs": "1.134.0",
     "@types/aws-lambda": "^8.10.85",
     "@types/jest": "^26.0.10",
