@@ -16,9 +16,9 @@ const handler: Handler = async (event, context) => {
   await lambda
     .invokeAsync({
       FunctionName: process.env.TRIGGERED_FUNCTION_NAME!,
-      InvokeArgs: {
+      InvokeArgs: JSON.stringify({
         invokingFunctionRequestId: context.awsRequestId,
-      },
+      }),
     })
     .promise();
   console.info("Invoked lambda. Ending!");
