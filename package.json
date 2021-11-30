@@ -20,6 +20,7 @@
     "@types/jest": "^26.0.10",
     "@types/node": "10.17.27",
     "aws-cdk": "1.134.0",
+    "esbuild": "^0.14.1",
     "jest": "^26.4.2",
     "prettier": "^2.5.0",
     "ts-jest": "^26.2.0",

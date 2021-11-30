@@ -20,8 +20,6 @@ In both lambdas, the `captureAWSClient` method from `aws-xray-sdk` is used as re
 
 This is an [aws-cdk](https://aws.amazon.com/cdk/) application.
 
-Prerequisite: `docker` must be installed and running
-
 1. Run `npm install`
 1. Run `npx cdk deploy 'TestXrayAsyncInvocationStack'`
 
