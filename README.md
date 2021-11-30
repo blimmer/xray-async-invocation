@@ -1,7 +1,7 @@
-# X-Ray Async Invocation Issue
+# Node X-Ray Async Invocation Issue
 
 This is some simple sample code that illustrates an issue where X-Ray Segments are lost when asynchronously invoking
-another lambda from an instrumented lambda.
+another Node lambda from an instrumented Node lambda.
 
 ## Code Layout
 
@@ -53,6 +53,30 @@ invocation of the triggered lambda.
 
 At the very least, even if the traces were not linked, I expected a trace to be produced by
 the triggered lambda.
+
+## Python Example
+
+I'm pretty confident that this is an issue with the Node version of the `aws-xray-sdk` package because everything
+works as expected when using the Python version of `aws-xray-sdk`.
+
+You can check out the [`use-python` branch of this repo](https://github.com/blimmer/xray-async-invocation/tree/use-python)
+to see this working.
+
+### Deploying the Python Example
+
+Prerequisites: You must have `docker` installed and running on your machine.
+
+1. `git checkout use-python`
+1. Run `npm install`
+1. Run `npx cdk deploy 'TestXrayAsyncInvocationStack'`
+
+### Running the Python Example
+
+Follow the same steps as [above](#reproduction-steps)
+
+You'll see that the X-Ray trace includes the asynchronous invocation, which is the expected behavior for Node, as well.
+
+![](https://i.imgur.com/1UNhurY.png)
 
 ## Tearing Down the Infrastructure
 
