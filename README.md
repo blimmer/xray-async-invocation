@@ -3,6 +3,8 @@
 This is some simple sample code that illustrates an issue where X-Ray Segments are lost when asynchronously invoking
 another Node lambda from an instrumented Node lambda.
 
+I opened an issue on the aws-xray-sdk-node GitHub repository: https://github.com/aws/aws-xray-sdk-node/issues/477 to track this issue.
+
 ## Code Layout
 
 There are two lambda functions defined in this repository:
@@ -39,7 +41,7 @@ succeeded.
 
 However, the triggered lambda produced no traces at all:
 
-![](https://i.imgur.com/FUKsXJv.png)
+![](https://i.imgur.com/rvxakBu.png)
 
 Even though it was definitely invoked:
 
