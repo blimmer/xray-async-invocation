@@ -13,7 +13,7 @@ There are two lambda functions defined in this repository:
 - [triggered lambda](https://github.com/blimmer/xray-async-invocation/blob/main/lib/xray-async-invocation-stack.triggered.ts)
   - lists all s3 buckets (to generate a segment)
 
-In both lambdas, the `captureAWSClient` method from `aws-xray-sdk` is used as recommended by
+In both lambdas, the `captureAWS` method from `aws-xray-sdk` is used as recommended by
 [this documentation](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-tracing.html).
 
 ## To Deploy
